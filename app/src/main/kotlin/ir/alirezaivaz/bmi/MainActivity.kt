@@ -81,6 +81,8 @@ class MainActivity : AppCompatActivity() {
     private fun ExtendedFloatingActionButton.initGitHubFab() {
         smoothShrink()
         this.setOnClickListener {
+            extend()
+            smoothShrink()
             val params = CustomTabColorSchemeParams.Builder()
                 .setToolbarColor(ContextCompat.getColor(this@MainActivity, R.color.github))
                 .build()
