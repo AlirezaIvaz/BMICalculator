@@ -16,4 +16,5 @@
     <string name="result_obese_1">چاقی کلاس ۱</string>
     <string name="result_obese_2">چاقی کلاس ۲</string>
     <string name="result_obese_3">چاقی کلاس ۳</string>
+    <string name="error_fill_all_fields">خواهشمندیم همهٔ فیلدها را پر کنید!</string>
 </resources>

@@ -1,6 +1,8 @@
 package ir.alirezaivaz.bmi
 
 import android.os.Bundle
+import android.widget.Toast
+import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
@@ -55,8 +57,18 @@ class MainActivity : AppCompatActivity() {
                     )
                     binding.resultCard.isVisible = true
                 }
+            } else {
+                toast(R.string.error_fill_all_fields)
             }
 
         }
+    }
+
+    private fun Context.toast(message: String, length: Int = Toast.LENGTH_SHORT) {
+        Toast.makeText(this, message, length).show()
+    }
+
+    private fun Context.toast(@StringRes message: Int, length: Int = Toast.LENGTH_SHORT) {
+        Toast.makeText(this, message, length).show()
     }
 }

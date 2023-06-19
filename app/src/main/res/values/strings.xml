@@ -16,4 +16,5 @@
     <string name="result_obese_1">Obese Class I</string>
     <string name="result_obese_2">Obese Class II</string>
     <string name="result_obese_3">Obese Class III</string>
+    <string name="error_fill_all_fields">Please fill all fields!</string>
 </resources>
