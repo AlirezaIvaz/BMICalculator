@@ -16,6 +16,7 @@ android {
         targetSdk = 33
         versionCode = 1
         versionName = "1.0.0"
+        resourceConfigurations += arrayOf("en", "fa")
         buildConfigField(
             "String",
             "GITHUB_REPO_URL",
