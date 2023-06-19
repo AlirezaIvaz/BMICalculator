@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">BMI Calculator</string>
+    <string name="action_calculate">Calculate</string>
+    <string name="height">Height</string>
+    <string name="height_unit">cm</string>
+    <string name="height_helper">Enter your height in Centimeter.</string>
+    <string name="weight">Weight</string>
+    <string name="weight_unit">kg</string>
+    <string name="weight_helper">Enter your weight in Kilogram.</string>
+    <string name="result_hint">Enter your height and weight to see your BMI.</string>
 </resources>

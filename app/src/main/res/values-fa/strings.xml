@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ماشین‌حساب BMI</string>
+    <string name="action_calculate">محاسبه</string>
+    <string name="height">قد</string>
+    <string name="height_unit">س‌م</string>
+    <string name="height_helper">قد خود را به سانتی‌متر وارد کنید.</string>
+    <string name="weight">وزن</string>
+    <string name="weight_unit">ک‌گ</string>
+    <string name="weight_helper">وزن خود را به کیلوگرم وارد کنید.</string>
+    <string name="result_hint">برای دیدن شاخص تودهٔ بدنی (BMI) قد و وزن خود را وارد کنید.</string>
 </resources>
