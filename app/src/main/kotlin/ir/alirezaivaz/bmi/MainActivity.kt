@@ -1,6 +1,10 @@
 package ir.alirezaivaz.bmi
 
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
 import android.os.Bundle
+import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
@@ -42,7 +46,9 @@ class MainActivity : AppCompatActivity() {
 
                 bmi?.let {
                     binding.bmiResult.text = String.format("%.1f", result)
+                    binding.bmiResult.enableTextCopy()
                     binding.bmiCategory.setText(it.title)
+                    binding.bmiCategory.enableTextCopy()
                     binding.bmiResult.setTextColor(
                         ContextCompat.getColor(
                             this@MainActivity,
@@ -61,6 +67,19 @@ class MainActivity : AppCompatActivity() {
                 toast(R.string.error_fill_all_fields)
             }
 
+        }
+    }
+
+    private fun TextView.enableTextCopy() {
+        this.setOnClickListener {
+            try {
+                val clipboardManager =
+                    getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+                val clip = ClipData.newPlainText("BMI", this.text)
+                clipboardManager.setPrimaryClip(clip)
+            } catch (e: Exception) {
+                toast(R.string.error_copy_failure)
+            }
         }
     }
 

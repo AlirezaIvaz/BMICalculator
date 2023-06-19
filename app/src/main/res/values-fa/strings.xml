@@ -17,4 +17,5 @@
     <string name="result_obese_2">چاقی کلاس ۲</string>
     <string name="result_obese_3">چاقی کلاس ۳</string>
     <string name="error_fill_all_fields">خواهشمندیم همهٔ فیلدها را پر کنید!</string>
+    <string name="error_copy_failure">مشکلی در رونویسی متن در بریده‌دان رخ داد!</string>
 </resources>

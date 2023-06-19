@@ -17,4 +17,5 @@
     <string name="result_obese_2">Obese Class II</string>
     <string name="result_obese_3">Obese Class III</string>
     <string name="error_fill_all_fields">Please fill all fields!</string>
+    <string name="error_copy_failure">Copy text to clipboard failed!</string>
 </resources>
