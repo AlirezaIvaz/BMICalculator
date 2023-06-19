@@ -35,13 +35,13 @@ class MainActivity : AppCompatActivity() {
 
             if (heightValue.isEmpty()) {
                 binding.inputLayoutHeight.isErrorEnabled = true
-                binding.inputLayoutHeight.error = "Please enter your height!"
+                binding.inputLayoutHeight.error = getString(R.string.error_enter_height)
             } else {
                 binding.inputLayoutHeight.isErrorEnabled = false
             }
             if (weightValue.isEmpty()) {
                 binding.inputLayoutWeight.isErrorEnabled = true
-                binding.inputLayoutWeight.error = "Please enter your Weight!"
+                binding.inputLayoutWeight.error = getString(R.string.error_enter_weight)
             } else {
                 binding.inputLayoutWeight.isErrorEnabled = false
             }

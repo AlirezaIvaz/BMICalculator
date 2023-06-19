@@ -17,6 +17,8 @@
     <string name="result_obese_1">چاقی کلاس ۱</string>
     <string name="result_obese_2">چاقی کلاس ۲</string>
     <string name="result_obese_3">چاقی کلاس ۳</string>
+    <string name="error_enter_height">خواهشمندیم قد خود را وارد کنید!</string>
+    <string name="error_enter_weight">خواهشمندیم وزن خود را وارد کنید!</string>
     <string name="error_fill_all_fields">خواهشمندیم همهٔ فیلدها را پر کنید!</string>
     <string name="error_copy_failure">مشکلی در رونویسی متن در بریده‌دان رخ داد!</string>
 </resources>
