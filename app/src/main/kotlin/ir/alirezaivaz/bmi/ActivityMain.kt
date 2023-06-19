@@ -18,7 +18,7 @@ import androidx.core.view.isVisible
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 import ir.alirezaivaz.bmi.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class ActivityMain : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,13 +59,13 @@ class MainActivity : AppCompatActivity() {
                     binding.bmiCategory.enableTextCopy()
                     binding.bmiResult.setTextColor(
                         ContextCompat.getColor(
-                            this@MainActivity,
+                            this@ActivityMain,
                             it.color
                         )
                     )
                     binding.bmiCategory.setTextColor(
                         ContextCompat.getColor(
-                            this@MainActivity,
+                            this@ActivityMain,
                             it.color
                         )
                     )
@@ -84,14 +84,14 @@ class MainActivity : AppCompatActivity() {
             extend()
             smoothShrink()
             val params = CustomTabColorSchemeParams.Builder()
-                .setToolbarColor(ContextCompat.getColor(this@MainActivity, R.color.github))
+                .setToolbarColor(ContextCompat.getColor(this@ActivityMain, R.color.github))
                 .build()
             CustomTabsIntent.Builder()
                 .setDefaultColorSchemeParams(params)
                 .setShowTitle(true)
                 .build()
                 .launchUrl(
-                    this@MainActivity,
+                    this@ActivityMain,
                     Uri.parse("https://github.com/AlirezaIvaz/BMICalculator")
                 )
         }
