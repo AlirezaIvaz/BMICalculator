@@ -3,10 +3,13 @@ package ir.alirezaivaz.bmi
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.StringRes
@@ -77,6 +80,30 @@ class ActivityMain : AppCompatActivity() {
             }
 
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.action_share -> {
+                val shareIntent = Intent(Intent.ACTION_SEND).apply {
+                    type = "text/plain"
+                    putExtra(Intent.EXTRA_SUBJECT, getString(R.string.app_name))
+                    putExtra(Intent.EXTRA_TEXT, "${getString(R.string.app_name)}\n$githubUrl")
+                }
+                startActivity(
+                    Intent.createChooser(
+                        shareIntent,
+                        getString(R.string.action_share_chooser)
+                    )
+                )
+            }
+        }
+        return true
     }
 
     private fun ExtendedFloatingActionButton.initGitHubFab() {

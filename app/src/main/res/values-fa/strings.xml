@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">ماشین‌حساب BMI</string>
     <string name="action_calculate">محاسبه</string>
+    <string name="action_share">هم‌رسانی</string>
+    <string name="action_share_chooser">هم‌رسانی با…</string>
     <string name="action_github">گیت‌هاب</string>
     <string name="height">قد</string>
     <string name="height_unit">س‌م</string>

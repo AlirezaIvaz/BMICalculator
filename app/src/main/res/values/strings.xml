@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">BMI Calculator</string>
     <string name="action_calculate">Calculate</string>
+    <string name="action_share">Share</string>
+    <string name="action_share_chooser">Share via…</string>
     <string name="action_github">GitHub</string>
     <string name="height">Height</string>
     <string name="height_unit">cm</string>
