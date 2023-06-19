@@ -23,7 +23,6 @@ import ir.alirezaivaz.bmi.databinding.ActivityMainBinding
 
 class ActivityMain : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private val githubUrl = "https://github.com/AlirezaIvaz/BMICalculator"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -93,7 +92,7 @@ class ActivityMain : AppCompatActivity() {
                 val shareIntent = Intent(Intent.ACTION_SEND).apply {
                     type = "text/plain"
                     putExtra(Intent.EXTRA_SUBJECT, getString(R.string.app_name))
-                    putExtra(Intent.EXTRA_TEXT, "${getString(R.string.app_name)}\n$githubUrl")
+                    putExtra(Intent.EXTRA_TEXT, "${getString(R.string.app_name)}\n${BuildConfig.DOWNLOAD_LINK}")
                 }
                 startActivity(
                     Intent.createChooser(
@@ -118,7 +117,7 @@ class ActivityMain : AppCompatActivity() {
                 .setDefaultColorSchemeParams(params)
                 .setShowTitle(true)
                 .build()
-                .launchUrl(this@ActivityMain, Uri.parse(githubUrl))
+                .launchUrl(this@ActivityMain, Uri.parse(BuildConfig.GITHUB_REPO_URL))
         }
         setOnLongClickListener {
             extend()

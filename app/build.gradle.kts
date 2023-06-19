@@ -4,6 +4,8 @@ plugins {
     alias(libs.plugins.kotlin)
 }
 
+val githubUrl = "https://github.com/AlirezaIvaz/BMICalculator"
+
 android {
     namespace = "ir.alirezaivaz.bmi"
     compileSdk = 33
@@ -14,6 +16,11 @@ android {
         targetSdk = 33
         versionCode = 1
         versionName = "1.0.0"
+        buildConfigField(
+            "String",
+            "GITHUB_REPO_URL",
+            "\"$githubUrl\""
+        )
     }
 
     buildTypes {
@@ -22,6 +29,45 @@ android {
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
+            )
+        }
+    }
+    flavorDimensions += "distributor"
+    productFlavors {
+        create("github") {
+            dimension = "distributor"
+            versionNameSuffix = "-GH"
+            buildConfigField(
+                "String",
+                "DOWNLOAD_LINK",
+                "\"$githubUrl\""
+            )
+        }
+        create("galaxyStore") {
+            dimension = "distributor"
+            versionNameSuffix = "-SG"
+            buildConfigField(
+                "String",
+                "DOWNLOAD_LINK",
+                "\"https://galaxystore.samsung.com/detail/${defaultConfig.applicationId}\""
+            )
+        }
+        create("cafebazaar") {
+            dimension = "distributor"
+            versionNameSuffix = "-CB"
+            buildConfigField(
+                "String",
+                "DOWNLOAD_LINK",
+                "\"https://cafebazaar.ir/app/${defaultConfig.applicationId}\""
+            )
+        }
+        create("myket") {
+            dimension = "distributor"
+            versionNameSuffix = "-MK"
+            buildConfigField(
+                "String",
+                "DOWNLOAD_LINK",
+                "\"https://myket.ir/app/${defaultConfig.applicationId}"
             )
         }
     }
@@ -34,6 +80,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
 
