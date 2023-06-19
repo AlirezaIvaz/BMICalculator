@@ -79,9 +79,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun ExtendedFloatingActionButton.initGitHubFab() {
-        Handler(Looper.getMainLooper()).postDelayed({
-            this.shrink()
-        }, 2000)
+        smoothShrink()
         this.setOnClickListener {
             val params = CustomTabColorSchemeParams.Builder()
                 .setToolbarColor(ContextCompat.getColor(this@MainActivity, R.color.github))
@@ -95,6 +93,12 @@ class MainActivity : AppCompatActivity() {
                     Uri.parse("https://github.com/AlirezaIvaz/BMICalculator")
                 )
         }
+    }
+
+    private fun ExtendedFloatingActionButton.smoothShrink() {
+        Handler(Looper.getMainLooper()).postDelayed({
+            this.shrink()
+        }, 2000)
     }
 
     private fun TextView.enableTextCopy() {
