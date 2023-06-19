@@ -3,6 +3,7 @@ android = "8.0.2"
 kotlin = "1.8.0"
 androidx-core-ktx = "1.10.1"
 androidx-appcompat = "1.6.1"
+androidx-browser = "1.5.0"
 androidx-constraintlayout = "2.1.4"
 material = "1.9.0"
 tablericons = "0.9.0"
@@ -10,6 +11,7 @@ tablericons = "0.9.0"
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core-ktx" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidx-appcompat" }
+androidx-browser = { group = "androidx.browser", name = "browser", version.ref = "androidx-browser" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "androidx-constraintlayout" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 tablericons = { group = "ir.alirezaivaz", name = "tablericons", version.ref = "tablericons" }

@@ -3,13 +3,19 @@ package ir.alirezaivaz.bmi
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
+import android.net.Uri
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.browser.customtabs.CustomTabColorSchemeParams
+import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 import ir.alirezaivaz.bmi.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -19,6 +25,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
+
+        binding.fab.initGitHubFab()
 
         binding.resultCard.isVisible = false
         binding.buttonCalculate.setOnClickListener {
@@ -67,6 +75,25 @@ class MainActivity : AppCompatActivity() {
                 toast(R.string.error_fill_all_fields)
             }
 
+        }
+    }
+
+    private fun ExtendedFloatingActionButton.initGitHubFab() {
+        Handler(Looper.getMainLooper()).postDelayed({
+            this.shrink()
+        }, 2000)
+        this.setOnClickListener {
+            val params = CustomTabColorSchemeParams.Builder()
+                .setToolbarColor(ContextCompat.getColor(this@MainActivity, R.color.github))
+                .build()
+            CustomTabsIntent.Builder()
+                .setDefaultColorSchemeParams(params)
+                .setShowTitle(true)
+                .build()
+                .launchUrl(
+                    this@MainActivity,
+                    Uri.parse("https://github.com/AlirezaIvaz/BMICalculator")
+                )
         }
     }
 
