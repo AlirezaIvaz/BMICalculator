@@ -3,7 +3,11 @@
     <string name="action_calculate">محاسبه</string>
     <string name="action_share">هم‌رسانی</string>
     <string name="action_share_chooser">هم‌رسانی با…</string>
+    <string name="action_rate">امتیاز به برنامه</string>
+    <string name="action_apps">برنامه‌های بیشتر</string>
     <string name="action_github">گیت‌هاب</string>
+    <string name="action_github_issues">ایشوها در گیت‌هاب</string>
+    <string name="action_github_profile">نمایهٔ گیت‌هاب</string>
     <string name="height">قد</string>
     <string name="height_unit">س‌م</string>
     <string name="height_helper">قد خود را به سانتی‌متر وارد کنید.</string>
@@ -23,4 +27,5 @@
     <string name="error_enter_weight">خواهشمندیم وزن خود را وارد کنید!</string>
     <string name="error_fill_all_fields">خواهشمندیم همهٔ فیلدها را پر کنید!</string>
     <string name="error_copy_failure">مشکلی در رونویسی متن در بریده‌دان رخ داد!</string>
+    <string name="error_action_failure">مشکلی در تکمیل این کنش رخ داد!</string>
 </resources>

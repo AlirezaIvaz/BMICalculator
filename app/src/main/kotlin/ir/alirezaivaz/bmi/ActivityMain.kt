@@ -101,6 +101,26 @@ class ActivityMain : AppCompatActivity() {
                     )
                 )
             }
+            R.id.action_rate -> {
+                try {
+                    val intentAction = if (BuildConfig.FLAVOR == "cafebazaar")
+                        Intent.ACTION_EDIT
+                    else
+                        Intent.ACTION_VIEW
+                    val intent = Intent(intentAction, Uri.parse(BuildConfig.RATE_INTENT))
+                    startActivity(intent)
+                } catch (e: Exception) {
+                    toast(R.string.error_action_failure)
+                }
+            }
+            R.id.action_apps -> {
+                try {
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(BuildConfig.APPS_INTENT))
+                    startActivity(intent)
+                } catch (e: Exception) {
+                    toast(R.string.error_action_failure)
+                }
+            }
         }
         return true
     }

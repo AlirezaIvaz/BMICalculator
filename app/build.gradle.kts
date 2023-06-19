@@ -42,6 +42,16 @@ android {
                 "DOWNLOAD_LINK",
                 "\"$githubUrl\""
             )
+            buildConfigField(
+                "String",
+                "RATE_INTENT",
+                "\"$githubUrl/issues\""
+            )
+            buildConfigField(
+                "String",
+                "APPS_INTENT",
+                "\"https://github.com/AlirezaIvaz\""
+            )
         }
         create("galaxyStore") {
             dimension = "distributor"
@@ -50,6 +60,16 @@ android {
                 "String",
                 "DOWNLOAD_LINK",
                 "\"https://galaxystore.samsung.com/detail/${defaultConfig.applicationId}\""
+            )
+            buildConfigField(
+                "String",
+                "RATE_INTENT",
+                "\"samsungapps://AppRating/${defaultConfig.applicationId}\""
+            )
+            buildConfigField(
+                "String",
+                "APPS_INTENT",
+                "\"samsungapps://SellerDetail/000000055766\""
             )
         }
         create("cafebazaar") {
@@ -60,6 +80,16 @@ android {
                 "DOWNLOAD_LINK",
                 "\"https://cafebazaar.ir/app/${defaultConfig.applicationId}\""
             )
+            buildConfigField(
+                "String",
+                "RATE_INTENT",
+                "\"bazaar://details?id=${defaultConfig.applicationId}\""
+            )
+            buildConfigField(
+                "String",
+                "APPS_INTENT",
+                "\"bazaar://collection?slug=by_author&aid=alirezaivaz\""
+            )
         }
         create("myket") {
             dimension = "distributor"
@@ -67,7 +97,17 @@ android {
             buildConfigField(
                 "String",
                 "DOWNLOAD_LINK",
-                "\"https://myket.ir/app/${defaultConfig.applicationId}"
+                "\"https://myket.ir/app/${defaultConfig.applicationId}\""
+            )
+            buildConfigField(
+                "String",
+                "RATE_INTENT",
+                "\"myket://comment?id=${defaultConfig.applicationId}\""
+            )
+            buildConfigField(
+                "String",
+                "APPS_INTENT",
+                "\"myket://developer/${defaultConfig.applicationId}\""
             )
         }
     }

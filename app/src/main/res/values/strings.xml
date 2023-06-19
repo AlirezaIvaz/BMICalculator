@@ -3,7 +3,11 @@
     <string name="action_calculate">Calculate</string>
     <string name="action_share">Share</string>
     <string name="action_share_chooser">Share via…</string>
+    <string name="action_rate">Rate</string>
+    <string name="action_apps">More apps</string>
     <string name="action_github">GitHub</string>
+    <string name="action_github_issues">GitHub issues</string>
+    <string name="action_github_profile">GitHub profile</string>
     <string name="height">Height</string>
     <string name="height_unit">cm</string>
     <string name="height_helper">Enter your height in Centimeter.</string>
@@ -23,4 +27,5 @@
     <string name="error_enter_weight">Please enter your weight!</string>
     <string name="error_fill_all_fields">Please fill all fields!</string>
     <string name="error_copy_failure">Copy text to clipboard failed!</string>
+    <string name="error_action_failure">Failed to complete this action!</string>
 </resources>
