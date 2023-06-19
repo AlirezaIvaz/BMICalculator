@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.BMICalculator" parent="Theme.Material3.DynamicColors.DayNight">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="M">?attr/isLightTheme</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="O_MR1">?attr/isLightTheme
+        </item>
+    </style>
+
+    <style name="Theme.BMICalculator" parent="Base.Theme.BMICalculator" />
+</resources>
