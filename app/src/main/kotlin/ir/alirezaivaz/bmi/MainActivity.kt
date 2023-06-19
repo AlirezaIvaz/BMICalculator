@@ -93,6 +93,11 @@ class MainActivity : AppCompatActivity() {
                     Uri.parse("https://github.com/AlirezaIvaz/BMICalculator")
                 )
         }
+        setOnLongClickListener {
+            extend()
+            smoothShrink()
+            true
+        }
     }
 
     private fun ExtendedFloatingActionButton.smoothShrink() {
