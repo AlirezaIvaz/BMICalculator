@@ -20,6 +20,7 @@ import ir.alirezaivaz.bmi.databinding.ActivityMainBinding
 
 class ActivityMain : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private val githubUrl = "https://github.com/AlirezaIvaz/BMICalculator"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -90,10 +91,7 @@ class ActivityMain : AppCompatActivity() {
                 .setDefaultColorSchemeParams(params)
                 .setShowTitle(true)
                 .build()
-                .launchUrl(
-                    this@ActivityMain,
-                    Uri.parse("https://github.com/AlirezaIvaz/BMICalculator")
-                )
+                .launchUrl(this@ActivityMain, Uri.parse(githubUrl))
         }
         setOnLongClickListener {
             extend()
