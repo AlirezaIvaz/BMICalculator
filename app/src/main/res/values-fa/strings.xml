@@ -8,4 +8,12 @@
     <string name="weight_unit">ک‌گ</string>
     <string name="weight_helper">وزن خود را به کیلوگرم وارد کنید.</string>
     <string name="result_hint">برای دیدن شاخص تودهٔ بدنی (BMI) قد و وزن خود را وارد کنید.</string>
+    <string name="result_very_severely_underweight">کم‌بود وزن بسیار شدید</string>
+    <string name="result_severely_underweight">کم‌بود وزن متوسط</string>
+    <string name="result_underweight">کم‌بود وزن</string>
+    <string name="result_normal">عادی</string>
+    <string name="result_overweight">اضافه‌وزن</string>
+    <string name="result_obese_1">چاقی کلاس ۱</string>
+    <string name="result_obese_2">چاقی کلاس ۲</string>
+    <string name="result_obese_3">چاقی کلاس ۳</string>
 </resources>

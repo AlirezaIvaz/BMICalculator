@@ -8,4 +8,12 @@
     <string name="weight_unit">kg</string>
     <string name="weight_helper">Enter your weight in Kilogram.</string>
     <string name="result_hint">Enter your height and weight to see your BMI.</string>
+    <string name="result_very_severely_underweight">Very Severely Underweight</string>
+    <string name="result_severely_underweight">Severely Underweight</string>
+    <string name="result_underweight">Underweight</string>
+    <string name="result_normal">Normal weight</string>
+    <string name="result_overweight">Overweight</string>
+    <string name="result_obese_1">Obese Class I</string>
+    <string name="result_obese_2">Obese Class II</string>
+    <string name="result_obese_3">Obese Class III</string>
 </resources>
