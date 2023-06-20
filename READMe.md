@@ -5,7 +5,9 @@
 
 A simple Material You BMI Calculator.
 
-You can download the application from [here](https://github.com/AlirezaIvaz/BMICalculator/releases).
+You can download the app from [releases page](https://github.com/AlirezaIvaz/BMICalculator/releases) or markets:
+
+[<img src="https://myket.ir/core/images/logo/get-en.png" alt="Get it on Myket" width="190">](https://myket.ir/app/ir.alirezaivaz.bmi)
 
 ## License
 
